@@ -85,5 +85,23 @@ I will be taking notes here to see if it will work.
        			Escreva (“Menor de idade”)
 		Fim-Se
 	------------------------------
+	JAVA
+	
+	if (idade >=18){
+    		if (idade==18){
+       			JOptionPane.showMessageDialog
+       			(null, “igual a 18”);
+    		}
+    		else {
+       			JOptionPane.showMessageDialog
+       			(null, “Maior de 18”);
+    		}
+	}
+	else {
+    	JOptionPane.showMessageDialog
+    	(null, “Menor de idade”);
+	}
+	------------------------------
+	
 	
 	
