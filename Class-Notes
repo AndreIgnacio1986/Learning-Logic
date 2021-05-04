@@ -13,17 +13,17 @@ I will be taking notes here to see if it will work.
 		------------------------------
 		Pseudocode	 about verifying the average grade for a student and cheking if his average grade is >=7 (true=approved; false=notApproved)
 			SE (condição) Então
-    				{comando(s)}
+				{comando(s)}
 			Fim-Se
-    		------------------------------
+    	------------------------------
 		JAVA
 			if (condição){
-    			{comando(s)};
+				{comando(s)};
 			}
 		------------------------------
 		Pseudocode	about verifying if a person is a minor or an adult (if the age is >=18 true=adult; false=minor)
 			SE (idade >=18) Então
-    				Escreva (“Maior de idade”)
+				Escreva (“Maior de idade”)
 			Fim-Se
 		------------------------------
 		JAVA
@@ -38,5 +38,52 @@ I will be taking notes here to see if it will work.
 	TRANSLATION:
 	The conditional IF tests the condition age>=18. So, if the age is equal or greater than 18 SO the condition is TRUE (follows the "YES" path).
 	Being TRUE it will be executed the WRITE command ("Adult"). If the test is FALSE (age <18) then nothing will be done (endIF)
+	
+	Você deve ter reparado, com base na sintaxe apresentada na tabela acima, que na programação Java a palavra SE é substituída pelo if e que a palavra Então é
+	substituída por { . O comando Escreva é substituído por JOptionPane.showMessageDialog e, finalmente, o Fim-Se é substituído por }.
+	
+	Then right after that explanation there is an example of this program written in JAVA:
+	======================================================================
+		import javax.swing.JOptionPane;
+
+      public class IfSimples {
+
+        public static void main(String[] args) {
+          //declaraçao de variáveis
+        int idade; // armazena a idade
+        String aux; //variável auxiliar
+
+        //entrada de dados
+        aux = JOptionPane.showInputDialog('Entre com a sua idade');
+        //conversão de tipos
+        idade = Integer.parseInt(aux);
+
+        //Decisão
+        if (idade >=18) {
+          JOptionPane.showMessageDialog(null, 'Maior de Idade');
+        }//fim do if
+        }//fim do main
+
+      }//fim da classe
+	======================================================================
+	
+	Estrutura de decisão aninhada
+	Usando novamente o exemplo da verificação de maioridade, agora o curso coloca um novo IF após ser verdade que a idade é >=18.
+	A primeira verificação fica sendo se é >=18. Caso seja, parte o programa para uma segunda verificação, que é se a idade é = 18.
+	Se a primeira verificação inicial for FALSA, o programa já parte para a mensagem "Menor de idade", pois o teste é falso se idade <18.
+	
+	------------------------------
+	Pseudocode
+	
+		SE (idade >=18) Então
+    		SE (idade = 18) Então
+        		Escreva (“Igual a 18”)
+    		Senão
+        		Escreva (“Maior de 18”)
+    		Fim-Se
+    		Senão
+       			Escreva (“Menor de idade”)
+		Fim-Se
+	------------------------------
 	
 	
