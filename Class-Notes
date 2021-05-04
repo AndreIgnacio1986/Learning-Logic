@@ -1,2 +1,20 @@
 Allright, this is probably wrong but it's the only place I've found where I can write at will to take notes, so that will be it.
 I will be taking notes here to see if it will work.
+
+04/05/2021 - I'm currently on studying Programming Logic with  UNIVESP, a free course from a Brazilian plataform with its roots at UNESP University (I guess)
+   	I'm starting today UNIDADE 3 and will be taking notes from this point forward
+    3 - Estruturas de decisão (Decision Structures)
+    estruturas condicionais Se.., Senão.. e Fim-se
+	Following that there is a drawn example of a flowchart about verifying the average grade for a student and cheking if his average grade is >=7 (true=approved; false=notApproved)
+	
+	Decision structure in JAVA used the command IF
+		Pseudocode
+			SE (condição) Então
+    			{comando(s)}
+			Fim-Se
+    	JAVA
+			if (condição){
+    			{comando(s)};
+			}
+			
+	
