@@ -3,18 +3,40 @@ I will be taking notes here to see if it will work.
 
 04/05/2021 - I'm currently on studying Programming Logic with  UNIVESP, a free course from a Brazilian plataform with its roots at UNESP University (I guess)
    	I'm starting today UNIDADE 3 and will be taking notes from this point forward
-    3 - Estruturas de decisão (Decision Structures)
+    
+3 - Estruturas de decisão (Decision Structures)
+    
     estruturas condicionais Se.., Senão.. e Fim-se
-	Following that there is a drawn example of a flowchart about verifying the average grade for a student and cheking if his average grade is >=7 (true=approved; false=notApproved)
+	Following that there are  drawn examples of flowcharts:
 	
 	Decision structure in JAVA used the command IF
-		Pseudocode
+		------------------------------
+		Pseudocode	 about verifying the average grade for a student and cheking if his average grade is >=7 (true=approved; false=notApproved)
 			SE (condição) Então
-    			{comando(s)}
+    				{comando(s)}
 			Fim-Se
-    	JAVA
+    		------------------------------
+		JAVA
 			if (condição){
     			{comando(s)};
 			}
-			
+		------------------------------
+		Pseudocode	about verifying if a person is a minor or an adult (if the age is >=18 true=adult; false=minor)
+			SE (idade >=18) Então
+    				Escreva (“Maior de idade”)
+			Fim-Se
+		------------------------------
+		JAVA
+		if (idade >=18){
+   			JOptionPane.showMessageDialog(null,
+		“Maior de idade”);
+		}
+		------------------------------
+	
+	O comando condicional SE testa a condição idade >=18. Ou seja, se a idade for maior ou igual a 18 anos ENTÃO a condição é verdadeira (segue-se o caminho “sim”).
+	Desse modo, será executado o comando Escreva (“Maior de idade”). Caso contrário (se a idade for menor que 18 anos), nada será feito (Fim-Se).
+	TRANSLATION:
+	The conditional IF tests the condition age>=18. So, if the age is equal or greater than 18 SO the condition is TRUE (follows the "YES" path).
+	Being TRUE it will be executed the WRITE command ("Adult"). If the test is FALSE (age <18) then nothing will be done (endIF)
+	
 	
