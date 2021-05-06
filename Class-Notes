@@ -67,6 +67,7 @@ I will be taking notes here to see if it will work.
       }//fim da classe
 	======================================================================
 	
+
 	Estrutura de decisão aninhada
 	Usando novamente o exemplo da verificação de maioridade, agora o curso coloca um novo IF após ser verdade que a idade é >=18.
 	A primeira verificação fica sendo se é >=18. Caso seja, parte o programa para uma segunda verificação, que é se a idade é = 18.
@@ -103,5 +104,114 @@ I will be taking notes here to see if it will work.
 	}
 	------------------------------
 	
+E agora o "programa completo em JAVA
+------------------------------------------------------------------------
+import javax.swing.JOptionPane;
+
+        public class ifAninhado {
+
+          public static void main(String[] args) {
+            //declaraçao de variáveis
+            int idade; // armazena a idade
+            String aux; //variável auxiliar
+
+            //entrada de dados
+            aux = JOptionPane.showInputDialog("Entre com a sua idade");
+            //conversão de tipos
+            idade = Integer.parseInt(aux);
+
+            //Decisão
+            if (idade >=18) { // primeiro if
+              //comandos se a condição for verdadeira
+              if (idade == 18) { // segundo if
+                JOptionPane.showMessageDialog(null, "igual a 18");
+              }else {
+              JOptionPane.showMessageDialog(null, "Maior de 18");
+              }//fim do segundo if
+            } else {
+              //comandos se a condição for falsa
+              JOptionPane.showMessageDialog(null, "Menor de Idade");
+            } // fim do primeiro if
+          }//fim do main
+
+        }//fim da classe
+	------------------------------------------------------------------------
 	
+	Na sequência do curso no módulo 3 é proposto que o usuário digite um número de 1 a 7 e que um programa diga qual dia da semana este número representa (domingo = 1)
+	Ou seja, os números de 1 a 7 serão uma variável de ENTRADA do tipo INTEIRO
 	
+	=================================================
+	import javax.swing.JOptionPane;
+
+        public class ifAninhadoSemana {
+
+          public static void main(String[] args) {
+            //declaração de variáveis
+            int dia; // variável para armazenamento da semana
+
+            //entrada de dados com conversão de tipos juntas
+            dia = Integer.parseInt(JOptionPane.showInputDialog("Entre com um número de 1 a 7"));
+
+            //processamento
+
+            if (dia == 1) { //if 1
+              JOptionPane.showMessageDialog(null, "Você escolheu Domingo");
+            } else {
+              if (dia == 2) { //if 2
+                JOptionPane.showMessageDialog(null, "Você escolheu Segunda");
+              } else {
+                if (dia == 3) { //if 3
+                  JOptionPane.showMessageDialog(null, "Você escolheu Terça");
+                } else {
+                  if (dia == 4) { //if 4
+                    JOptionPane.showMessageDialog(null, "Você escolheu Quarta");
+                  } else {
+                    if (dia == 5) { //if 5
+                      JOptionPane.showMessageDialog(null, "Você escolheu Quinta");
+                    } else {
+                      if (dia == 6) { //if 6
+                        JOptionPane.showMessageDialog(null, "Você escolheu Sexta");
+                      } else {
+                        if (dia == 7) { //if 7
+                          JOptionPane.showMessageDialog(null, "Você escolheu Sábado");
+                        } else {
+                          JOptionPane.showMessageDialog(null, "Número Inválido");
+                        } // fim do if 7
+                      } // fim do if 6
+                    } // fim do if 5
+                  } // fim do if 4
+                } // fim do if 3
+              } // fim do if 2
+            } // fim do if 1
+          } // fim do método main
+
+        } // fim da classe
+		
+		=================================================
+		
+		Para realizarmos uma comparação de um conteúdo de uma variável com uma String – sequência de caracteres – no Java, temos que utilizar um método especial: o .equals().
+		
+		import javax.swing.JOptionPane;
+
+            public class IfEquals {
+
+              public static void main(String[] args) {
+                //declaração de variáveis
+                String nome;
+
+                //entrada de dados
+                nome = JOptionPane.showInputDialog("Entre com um nome");
+
+                //Processamento e saída
+                if (nome.equals("Jose")) {
+                  JOptionPane.showMessageDialog(null,"O Nome Digitado é Jose");
+                } else {
+                  JOptionPane.showMessageDialog(null, "O nome digitado foi " + nome);
+                }
+              }
+            }
+			
+			=================================================
+			
+			Ou seja, se declararmos uma variável x do tipo inteiro e usarmos uma estrutura de decisão if para verificar se x=5, usaremos if (x==5) {
+			Quando pedirmos pro usuário declarar uma variável "nome" do tipo String (ex.: "Digite seu nome") podemos usar a estrutura de decisão para verificar se o 
