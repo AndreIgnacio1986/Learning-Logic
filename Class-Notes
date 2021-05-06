@@ -211,7 +211,116 @@ import javax.swing.JOptionPane;
               }
             }
 			
-			=================================================
+=================================================
 			
-			Ou seja, se declararmos uma variável x do tipo inteiro e usarmos uma estrutura de decisão if para verificar se x=5, usaremos if (x==5) {
-			Quando pedirmos pro usuário declarar uma variável "nome" do tipo String (ex.: "Digite seu nome") podemos usar a estrutura de decisão para verificar se o 
+Ou seja, se declararmos uma variável x do tipo inteiro e usarmos uma estrutura de decisão if para verificar se x=5, usaremos if (x==5) {
+Quando pedirmos pro usuário declarar uma variável "nome" do tipo String (ex.: "Digite seu nome") podemos usar a estrutura de decisão if para verificar se o "nome" digitado 
+é igual ao valor de comparação 
+	 if (nome.equals("Jose")) {
+                  JOptionPane.showMessageDialog(null,"O Nome Digitado é Jose");
+		  
+	------------------------------------------------
+	import javax.swing.JOptionPane;
+
+            public class IfEquals {
+
+              public static void main(String[] args) {
+                //declaração de variáveis
+                String nome;
+
+                //entrada de dados
+                nome = JOptionPane.showInputDialog("Entre com um nome");
+
+                //Processamento e saída
+                if (nome.equals("Jose")) {
+                  JOptionPane.showMessageDialog(null,"O Nome Digitado é Jose");
+                } else {
+                  JOptionPane.showMessageDialog(null, "O nome digitado foi " + nome);
+                }
+              }
+            }
+
+------------------------------------------------
+
+Estrutura de Decisão caso... senão... fim_selecione
+
+Pseudocódigo
+Selecione Caso {variável}
+          Caso condição 01
+              {comando(s)}
+          Caso condição 02
+              {comando(s)}
+          Caso condição 03
+              {comando(s)}
+          ...
+          Senão
+              {comando(s)}
+      Fim-Selecione
+
+JAVA
+switch (variável){
+          case condição 01:
+              {comando(s)};
+              break;
+          case condição 02:
+              {comando(s)};
+              break;
+          case condição 03:
+              {comando(s)};
+              break;
+          ...
+          default:
+              {comando(s)};
+      }
+      
+ -------------------------------------
+ 
+ Exemplo em JAVA do pequeno programa que diz o dia da semana baseado na variável número de 1 a 7
+ 
+ import javax.swing.JOptionPane;
+
+          public class caseDiaSemana {
+
+            public static void main(String[] args) {
+              //declaração de variáveis
+              int dia; // variável para armazenamento da semana
+
+              //entrada de dados com conversão de tipos juntas
+              dia = Integer.parseInt(JOptionPane.showInputDialog("Entre com um número de 1 a 7"));
+
+              //processamento
+
+              switch (dia) {
+                case 1:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Domingo");
+                  break;
+                case 2:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Segunda");
+                  break;
+                case 3:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Terça");
+                  break;
+                case 4:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Quarta");
+                  break;
+                case 5:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Quinta");
+                  break;
+                case 6:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Sexta");
+                  break;
+                case 7:
+                  JOptionPane.showMessageDialog(null, "Você escolheu Sábado");
+                default:
+                  JOptionPane.showMessageDialog(null, "Número inválido");
+                  break;
+                }//fim do switch-case
+            } // fim do método main
+          } // fim da classe
+	  
+======================================================================
+
+
+
+
+
