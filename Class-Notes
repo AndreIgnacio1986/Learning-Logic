@@ -318,8 +318,157 @@ switch (variável){
             } // fim do método main
           } // fim da classe
 	  
-======================================================================
+==================================================================================================================================
 
+UNIDADE 4 
+
+Estruturas de repetição 
+
+----------------------------------------------------------
+1. Enquanto... fim-enquanto
+
+Pseudocódigo
+	Enquanto <condição> faça
+     	<Comando>
+     	<Comando>
+      	<Comando>
+	Fim enquanto
+	
+JAVA
+while (condição){
+	instrução
+}
+---------------------------
+Vejamos outro exemplo da estrutura Enquanto... fim-enquanto:
+Nestra estrutura de repetição, primeiro são dadas as condições e depois as intruções
+Elabore um Algoritmo, um Fluxograma e um Programa em Java que mostre todos os números menores que 10.
+Pseudocódigo
+
+Programa ex
+
+  Declare
+        num como inteiro
+  Início
+        Num <- 0
+        Enquanto (num < 10) faça
+              escreva num
+              num <- num+1
+        fim-enquanto
+
+-----
+JAVA
+    public class ex01 {
+
+            public static void main(String[]args) {
+                  int num =0;
+                  while (num < 10) {
+                        System.out.println("Número " + num);
+                        num++;
+                  }
+            }
+          }
+-----
+lembrando que o incremento não é automátio e a ausência dele pode gerar um loop infinito levando ao esgotamento da memória do computador.
+
+----------------------------------------------------------
+
+1. Repita... até-que
+Nestra estrutura de repetição, primeiro são dadas as instruções e depois as condições de repetição.
+
+-----
+Pseudocódigo
+
+Repita <condição> faça
+      <Comando>
+      <Comando>
+      <Comando>
+até que<Comando>
+-----
+JAVA
+
+do {
+      instrução
+}
+while (condição)
+-----
+
+No exemplo mostrado anteriormente, de um programa que mostra pro usuário os números de 0 à 9, usando a estrutura de repetição "Repita... até-que" teremos:
+
+-----
+Pseudocódigo
+
+Declare
+          num como inteiro
+    Início
+          repita
+                escreva num
+                num < num + 1
+          até que (num < 10)
+     fim.
+-----
+JAVA
+
+
+           public class ex01 {
+
+            public static void main(String[]args) {
+               int num =0;
+               do{
+                    System.out.println("Número " + num);
+                    num++;
+               }
+               while (num < 10);
+            }
+        }
+-----
+
+Utilizando comandos de repetição em conjunto com comando condicional if
+
+Nas unidades anteriores você viu que é possível utilizar o comando para (for) em conjunto com o se (if) para atingir a solução de um problema na programação. Assim, como no caso do para, também podemos usar o enquanto (while) e o repita até (do while) em conjunto com o se (if) com o mesmo propósito.
+
+Veja o exemplo a seguir, um programa de uma empresa financeira. Nele, o usuário informa seu cargo e salário e, a partir dessas informações, o programa informa quanto de empréstimo a pessoa pode obter.
+
+Diretor = 30%
+Gerente = 25%
+Operacional = 20%
+
+import java.util.Scanner;
+            public class ex03 {
+
+                  public static void main(String[]args) {
+
+                        String nome, cargo;
+                        float sal, emprestimo=0;
+
+                        System.out.println("Por favor informe seu nome");
+                        nome = new Scanner(System.in).nextLine();
+                        System.out.println("E agora informe seu cargo (Diretor, Gerente ou Operacional)");
+
+                        cargo = new Scanner(System.in).nextLine();
+
+                        while (cargo == "Diretor" || cargo == "Gerente" || cargo == "Operacional") {
+                              System.out.println("Cargo incorreto, por favor informe o cargo novamente");
+                              cargo = new scanner(System.in).nextLine();
+                        }
+
+                        System.out.println("Agora informe o seu salário");
+                        sal = new scanner(System.in).nextFloat();
+
+                        if (cargo.equals("Gerente"))
+                            emprestimo = sal*25/100;
+                        else if (cargo.equals("Diretor"))
+                            emprestimo = sal*30/100;
+                        else
+                            emprestimo = sal*20/100;
+
+                        System.out.println("Olá" + nome);
+                        System.out.println("Seu cargo é" + cargo);
+                        System.out.println("Seu salário é" + sal);
+                        System.out.println("Olá" + nome);
+                        System.out.println("E você tem direito a pegar R$" + emprestimo + "de empréstimo");
+               }
+           }
+-------------------------------------------------
 
 
 
